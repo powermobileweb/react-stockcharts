@@ -1,0 +1,39 @@
+{
+	"presets": [
+		"react",
+		"stage-3"
+	],
+	"plugins": [
+		"transform-flow-strip-types"
+	],
+	"env": {
+		"cjs": {
+			"presets": [["env"]]
+		},
+		"es": {
+			"presets": [
+				["env", { "modules": false  }]
+			]
+		},
+		"watch": {
+			"presets": [
+				["env", {
+					"targets": {
+						"chrome": 59
+					},
+					"modules": false
+				}]
+			]
+		},
+		"server": {
+			"presets": [
+				["env", {
+					"targets": {
+						"node": 7.5
+					},
+					"loose": true
+				}]
+			]
+		}
+	}
+}
